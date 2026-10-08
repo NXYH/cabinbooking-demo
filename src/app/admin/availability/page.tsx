@@ -167,7 +167,7 @@ function HourSelect({ label, value, range, onChange }: { label: string; value: n
     <div>
       <Label className="mb-1.5 text-xs text-muted-foreground">{label}</Label>
       <Select value={String(value)} onValueChange={(v) => onChange(Number(v))}>
-        <SelectTrigger className="w-full"><SelectValue /></SelectTrigger>
+        <SelectTrigger className="w-full"><SelectValue>{(v: string) => hourLabel(Number(v))}</SelectValue></SelectTrigger>
         <SelectContent>{opts.map((h) => <SelectItem key={h} value={String(h)}>{hourLabel(h)}</SelectItem>)}</SelectContent>
       </Select>
     </div>

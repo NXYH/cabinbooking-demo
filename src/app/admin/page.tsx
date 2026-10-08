@@ -63,7 +63,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <PageHead title="Good day, Anil." sub={`${format(now, "EEEE, d MMMM yyyy")}, Here's how the hall is performing.`} />
+      <PageHead title="Good day, Anil." sub={`${format(now, "EEEE, d MMMM yyyy")}. Here's how the hall is performing.`} />
 
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <Kpi label="Revenue this month" value={inr(m.revThis)} delta={delta(m.revThis, m.revLast)} />

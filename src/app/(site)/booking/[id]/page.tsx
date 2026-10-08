@@ -95,9 +95,11 @@ export default function BookingDone() {
         </div>
 
         <div>
-          <div className="mb-3 flex items-center gap-2 text-sm text-muted-foreground">
-            <Mail className="size-4" /> Email sent to {b.email}
-            {mail && <span className="truncate">: {mail.subject}</span>}
+          <div className="mb-3 text-sm">
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Mail className="size-4" /> Sent to {b.email}
+            </div>
+            {mail && <div className="mt-1 truncate font-medium">{mail.subject}</div>}
           </div>
           <EmailFrame booking={b} template={confirmed ? "confirmed" : "received"} />
         </div>

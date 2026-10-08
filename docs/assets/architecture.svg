@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="460" viewBox="0 0 1280 460" role="img" aria-label="Architecture: pages read and write a Zustand store persisted to localStorage, backed by logic, seed and email modules">
+  <style>
+    .sans { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    .box { fill: #ffffff; stroke: #D9DEDC; stroke-width: 1.5; }
+    .hub { fill: #0E4A43; }
+    .flow { fill: none; stroke: #0E4A43; stroke-width: 2; stroke-dasharray: 6 8; animation: dash 1.2s linear infinite; }
+    .flowRev { animation-direction: reverse; }
+    @keyframes dash { to { stroke-dashoffset: -28 } }
+    @media (prefers-reduced-motion: reduce) { .flow { animation: none } }
+    .h { font-size: 16px; font-weight: 600; fill: #1B2321; }
+    .s { font-size: 13px; fill: #5D6866; }
+  </style>
+  <rect width="1280" height="460" fill="#F7F8F8"/>
+  <g class="sans">
+    <!-- public pages -->
+    <text x="60" y="52" font-size="14" font-weight="600" fill="#5D6866">Public site · src/app/(site)</text>
+    <rect class="box" x="60" y="68" width="250" height="56" rx="8"/><text class="h" x="80" y="94">Landing</text><text class="s" x="80" y="112">Video hero, specs, facilities</text>
+    <rect class="box" x="60" y="136" width="250" height="56" rx="8"/><text class="h" x="80" y="162">Book + checkout</text><text class="s" x="80" y="180">Slot picker, simulated payment</text>
+    <rect class="box" x="60" y="204" width="250" height="56" rx="8"/><text class="h" x="80" y="230">Confirmation + invoice</text><text class="s" x="80" y="248">Email preview, GST invoice, .ics</text>
+    <rect class="box" x="60" y="272" width="250" height="56" rx="8"/><text class="h" x="80" y="298">Client portal</text><text class="s" x="80" y="316">History by mobile number</text>
+    <rect class="box" x="60" y="340" width="250" height="56" rx="8"/><text class="h" x="80" y="366">Reviews</text><text class="s" x="80" y="384">Read and submit</text>
+
+    <!-- hub -->
+    <rect class="hub" x="490" y="150" width="300" height="160" rx="12"/>
+    <text x="640" y="200" text-anchor="middle" font-size="20" font-weight="600" fill="#ffffff">Zustand store</text>
+    <text x="640" y="226" text-anchor="middle" font-size="14" fill="#ffffff" fill-opacity=".8">src/lib/store.ts</text>
+    <text x="640" y="262" text-anchor="middle" font-size="13" fill="#ffffff" fill-opacity=".75">bookings, settings, reviews,</text>
+    <text x="640" y="282" text-anchor="middle" font-size="13" fill="#ffffff" fill-opacity=".75">templates, sent emails</text>
+    <rect class="box" x="540" y="350" width="200" height="56" rx="8"/><text class="h" x="560" y="376">localStorage</text><text class="s" x="560" y="394">persist middleware</text>
+
+    <!-- admin -->
+    <text x="970" y="52" font-size="14" font-weight="600" fill="#5D6866">Admin console · src/app/admin</text>
+    <rect class="box" x="970" y="68" width="250" height="56" rx="8"/><text class="h" x="990" y="94">Dashboard</text><text class="s" x="990" y="112">KPIs and analytics charts</text>
+    <rect class="box" x="970" y="136" width="250" height="56" rx="8"/><text class="h" x="990" y="162">Bookings</text><text class="s" x="990" y="180">Confirm, modify, manual entry</text>
+    <rect class="box" x="970" y="204" width="250" height="56" rx="8"/><text class="h" x="990" y="230">Slots + pricing</text><text class="s" x="990" y="248">Hours, blocks, rates, GST</text>
+    <rect class="box" x="970" y="272" width="250" height="56" rx="8"/><text class="h" x="990" y="298">Clients + payments</text><text class="s" x="990" y="316">History, dues, refunds</text>
+    <rect class="box" x="970" y="340" width="250" height="56" rx="8"/><text class="h" x="990" y="366">Emails + reviews</text><text class="s" x="990" y="384">HTML templates, moderation</text>
+
+    <!-- modules -->
+    <text x="640" y="52" text-anchor="middle" font-size="14" font-weight="600" fill="#5D6866">Pure modules · src/lib</text>
+    <rect class="box" x="455" y="68" width="110" height="48" rx="8"/><text class="h" x="510" y="98" text-anchor="middle">logic</text>
+    <rect class="box" x="585" y="68" width="110" height="48" rx="8"/><text class="h" x="640" y="98" text-anchor="middle">seed</text>
+    <rect class="box" x="715" y="68" width="110" height="48" rx="8"/><text class="h" x="770" y="98" text-anchor="middle">emails</text>
+
+    <!-- flows -->
+    <path class="flow" d="M310 164 C400 164 420 230 490 230"/>
+    <path class="flow" d="M310 232 C400 232 430 240 490 240"/>
+    <path class="flow" d="M310 300 C400 300 420 250 490 250"/>
+    <path class="flow flowRev" d="M970 164 C880 164 860 230 790 230"/>
+    <path class="flow flowRev" d="M970 232 C880 232 850 240 790 240"/>
+    <path class="flow flowRev" d="M970 300 C880 300 860 250 790 250"/>
+    <path class="flow" d="M640 310 L640 350"/>
+    <path class="flow" d="M640 116 L640 150"/>
+  </g>
+</svg>

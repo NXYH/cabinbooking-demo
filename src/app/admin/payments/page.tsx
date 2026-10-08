@@ -59,7 +59,7 @@ export default function PaymentsPage() {
         ))}
       </div>
 
-      <div className="mt-4 grid gap-4 xl:grid-cols-[1fr_2fr]">
+      <div className="mt-4 grid gap-4 xl:grid-cols-[minmax(0,4fr)_minmax(0,9fr)]">
         <Card>
           <CardHeader>
             <CardTitle>By payment method</CardTitle>

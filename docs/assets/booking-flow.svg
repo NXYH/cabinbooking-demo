@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300" role="img" aria-label="Booking flow: choose hours, event details, pay, confirmation email, admin">
+  <style>
+    .sans { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    .node { fill: #ffffff; stroke: #C9D0CE; stroke-width: 2; animation: lit 8s infinite; }
+    .num { fill: #5D6866; animation: litText 8s infinite; }
+    @keyframes lit { 0% { fill: #ffffff; stroke: #C9D0CE } 6%, 100% { fill: #0E4A43; stroke: #0E4A43 } }
+    @keyframes litText { 0% { fill: #5D6866 } 6%, 100% { fill: #ffffff } }
+    .n1, .t1 { animation-delay: 0s } .n2, .t2 { animation-delay: 1.4s } .n3, .t3 { animation-delay: 2.8s } .n4, .t4 { animation-delay: 4.2s } .n5, .t5 { animation-delay: 5.6s }
+    .progress { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: grow 8s linear infinite; }
+    @keyframes grow { 0% { stroke-dashoffset: 1000 } 70%, 100% { stroke-dashoffset: 0 } }
+    @media (prefers-reduced-motion: reduce) { .node, .num, .progress { animation: none } }
+  </style>
+  <rect width="1280" height="300" fill="#F7F8F8"/>
+  <line x1="140" y1="120" x2="1140" y2="120" stroke="#D9DEDC" stroke-width="3"/>
+  <line class="progress" x1="140" y1="120" x2="1140" y2="120" stroke="#0E4A43" stroke-width="3"/>
+  <circle r="6" fill="#8B5E34">
+    <animateMotion dur="8s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.7;1" calcMode="linear" path="M140 120 L1140 120"/>
+  </circle>
+  <g class="sans" text-anchor="middle">
+    <g transform="translate(140 120)"><circle class="node n1" r="28"/><text class="num t1" y="7" font-size="20" font-weight="600">1</text>
+      <text y="70" font-size="18" font-weight="600" fill="#1B2321">Choose hours</text><text y="96" font-size="14" fill="#5D6866">Calendar + live hourly slots</text></g>
+    <g transform="translate(390 120)"><circle class="node n2" r="28"/><text class="num t2" y="7" font-size="20" font-weight="600">2</text>
+      <text y="70" font-size="18" font-weight="600" fill="#1B2321">Event details</text><text y="96" font-size="14" fill="#5D6866">Guests, purpose, contact, organisation</text></g>
+    <g transform="translate(640 120)"><circle class="node n3" r="28"/><text class="num t3" y="7" font-size="20" font-weight="600">3</text>
+      <text y="70" font-size="18" font-weight="600" fill="#1B2321">Pay online</text><text y="96" font-size="14" fill="#5D6866">UPI, card, netbanking, wallet</text></g>
+    <g transform="translate(890 120)"><circle class="node n4" r="28"/><text class="num t4" y="7" font-size="20" font-weight="600">4</text>
+      <text y="70" font-size="18" font-weight="600" fill="#1B2321">Confirmed</text><text y="96" font-size="14" fill="#5D6866">Email, GST invoice, .ics file</text></g>
+    <g transform="translate(1140 120)"><circle class="node n5" r="28"/><text class="num t5" y="7" font-size="20" font-weight="600">5</text>
+      <text y="70" font-size="18" font-weight="600" fill="#1B2321">Admin console</text><text y="96" font-size="14" fill="#5D6866">Approve, modify, track revenue</text></g>
+  </g>
+</svg>
