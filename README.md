@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Cabin · Conference hall booking (client demo)
 
-## Getting Started
-
-First, run the development server:
+Next.js 16 + shadcn/ui (Base UI) front-end demo. No backend: all data is dummy seed data persisted in the browser's localStorage.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev          # http://localhost:3000
+pnpm check        # pricing/availability self-check
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where things are
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Area | Route |
+|---|---|
+| Landing (video hero, space, facilities, gallery, reviews) | `/` |
+| Booking + simulated Razorpay checkout | `/book` → `/booking/[id]` |
+| Reviews | `/reviews` |
+| Client portal (look up by mobile, e.g. `9847012301`) | `/portal` |
+| Printable GST invoice | `/invoice/[id]` |
+| Admin: dashboard, bookings, slots, pricing, clients, payments, email templates, reviews | `/admin` |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Swapping in client content
 
-## Learn More
+- **Hero video:** drop the file at `public/media/hall.mp4`. It fades in over the hero image once it plays.
+- **Venue copy, capacity, facilities, address, GSTIN:** `src/lib/venue.ts`.
+- **Dummy data:** `src/lib/seed.ts`. Use "Reset demo data" in the admin sidebar to restore it.
 
-To learn more about Next.js, take a look at the following resources:
+## Demo notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Payments are simulated (TEST MODE). Netbanking offers Success/Failure to show both paths. Going live means swapping `src/components/razorpay-checkout.tsx` for Razorpay Checkout.js plus a server-side order and signature check.
+- Emails are not sent. They are logged in Admin → Email Templates → Sent log and rendered from the editable HTML templates.
+- Admin has no login in the demo.
